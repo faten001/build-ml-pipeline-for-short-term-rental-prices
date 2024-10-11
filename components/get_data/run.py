@@ -22,10 +22,11 @@ def go(args):
     logger.info(f"Returning sample {args.sample}")
     logger.info(f"Uploading {args.artifact_name} to Weights & Biases")
     run.log_artifact(
+        os.path.join("data/", args.sample),
         args.artifact_name,
         args.artifact_type,
         args.artifact_description,
-        os.path.join("data/", args.sample),
+        
       
     )
 

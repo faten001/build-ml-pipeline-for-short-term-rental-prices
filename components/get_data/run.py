@@ -8,7 +8,7 @@ import os
 
 import wandb
 
-from wandb.log_artifact import log_artifact
+#from wandb.log_artifact import log_artifact
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)-15s %(message)s")
 logger = logging.getLogger()
@@ -29,8 +29,8 @@ def go(args):
     artifact.add_file(os.path.join("data", args.sample))
     artifact.description = args.artifact_description
     artifact.aliases=['latest','reference']
-    run.log_artifact(artifact)
 
+    run.log_artifact(artifact)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download URL to a local destination")

@@ -1,0 +1,1 @@
+room_type: category neighbourhood_group: category minimum_nights: int64 number_of_reviews: int64 reviews_per_month: float64 calculated_host_listings_count: int64 availability_365: int64 longitude: float64 latitude: float64 last_review: category name: category

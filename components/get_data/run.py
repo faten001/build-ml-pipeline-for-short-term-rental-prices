@@ -28,6 +28,8 @@ def go(args):
     )
     artifact.add_file(os.path.join("data", args.sample))
     artifact.description = args.artifact_description
+    artifact.aliases=['latest','reference']
+
     run.log_artifact(artifact)
 
 if __name__ == "__main__":

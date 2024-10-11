@@ -16,7 +16,7 @@ logger = logging.getLogger()
 
 def go(args):
 
-    run = wandb.init(job_type="download_file")
+    run = wandb.init(job_type="download_file",mode="disabled")
     run.config.update(args)
 
     logger.info(f"Returning sample {args.sample}")
@@ -28,7 +28,7 @@ def go(args):
     )
     artifact.add_file(os.path.join("data", args.sample))
     artifact.description = args.artifact_description
-    artifact.wait()
+    
     artifact.aliases=['latest','reference']
     
     run.log_artifact(artifact)

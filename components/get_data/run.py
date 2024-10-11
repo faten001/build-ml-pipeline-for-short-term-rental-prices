@@ -21,7 +21,7 @@ def go(args):
 
     logger.info(f"Returning sample {args.sample}")
     logger.info(f"Uploading {args.artifact_name} to Weights & Biases")
-    artifact = run.Artifact(
+    artifact = wandb.Artifact(
         name=args.artifact_name,
         type=args.artifact_type,
     

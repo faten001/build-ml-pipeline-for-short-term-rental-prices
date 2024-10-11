@@ -21,15 +21,14 @@ def go(args):
 
     logger.info(f"Returning sample {args.sample}")
     logger.info(f"Uploading {args.artifact_name} to Weights & Biases")
-    run.log_artifact(
-        os.path.join("data/", args.sample),
-        args.artifact_name,
-        args.artifact_type,
-        args.artifact_description,
-        
-      
+    artifact = run.Artifact(
+        name=args.artifact_name,
+        type=args.artifact_type,
+    
     )
-
+    artifact.add_file(os.path.join("data", args.sample))
+    artifact.description(args.artifact_description)
+    run.log_artifact(artifact)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Download URL to a local destination")

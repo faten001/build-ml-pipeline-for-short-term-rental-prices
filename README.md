@@ -568,6 +568,7 @@ you have trained your new model on the new data.
 
 ## Links
 Github repository https://github.com/faten001/build-ml-pipeline-for-short-term-rental-prices.git
+
 Weights & Baises https://wandb.ai/faten/nyc_airbnb/overview
 
 ## License

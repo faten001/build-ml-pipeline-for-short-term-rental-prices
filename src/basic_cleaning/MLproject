@@ -6,27 +6,27 @@ entry_points:
     parameters:
 
       input_artifact:
-        description: ## ADD DESCRIPTION
+        description: 'Input data'
         type: string
 
       output_artifact:
-        description: ## ADD DESCRIPTION
+        description: 'Cleaned data'
         type: string
 
       output_type:
-        description: ## ADD DESCRIPTION
+        description: 'Csv file'
         type: string
 
       output_description:
-        description: ## ADD DESCRIPTION
+        description: 'Preprocessed data'
         type: string
 
       min_price:
-        description: ## ADD DESCRIPTION
+        description: 'Minimum rent price'
         type: string
 
       max_price:
-        description: ## ADD DESCRIPTION
+        description: 'Maximum rent price'
         type: string
 
 
